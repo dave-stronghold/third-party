@@ -1,7 +1,7 @@
-import Seo from "../../components/common/Seo";
-import DefaultHeader from "../../components/header/DefaulHeader";
+import Seo from "../components/common/Seo";
+import DefaultHeader from "../components/header/DefaulHeader";
 // import DefaultFooter from "../../components/footer/DefaultFooter";
-import FaqAccordion from "../../components/pages-com/FaqAccordion";
+import FaqAccordion from "../components/pages-com/FaqAccordion";
 import Link from "next/link";
 
 const Faq = () => {
