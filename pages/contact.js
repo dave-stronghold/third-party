@@ -7,9 +7,12 @@ import DefaultHeader from "../components/header/DefaulHeader";
 import Timelines from "../components/timeline/timelines";
 import Link from "next/link";
 import { FiChevronsDown } from "react-icons/fi";
+import { useState } from "react";
 const contact = () => {
+  const[stage,setStage]=useState(false)
   const handleSubmit = (event) => {
-    event.preventDefault(); // prevents default form submission
+    event.preventDefault();
+    setStage(!stage) // prevents default form submission
     // add your form submission logic here
   };
   return (
@@ -62,7 +65,10 @@ const contact = () => {
             </div>
             <div className="tcolumn col-md-5 m-auto text-center">
               <div className="tcon">
-                <Timelines />
+                {stage?<Timelines />
+                :<div className="loader-con">
+                  <img src="/images/loader.gif" />
+                </div>}
               </div>
             </div>
             {/* /.subscribe-form */}
